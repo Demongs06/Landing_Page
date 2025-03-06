@@ -551,6 +551,8 @@ button {
 }
 
 .item3{
+  margin: 20px;
+  padding:20px;
   text-align: start;
   order: 2;
 }
