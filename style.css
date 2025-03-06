@@ -551,8 +551,6 @@ button {
 }
 
 .item3{
-  margin: 20px;
-  padding:20px;
   text-align: start;
   order: 2;
 }
@@ -582,7 +580,8 @@ button {
 }
 
 .item3 {
-  padding-top: 20px;
+  margin: 20px;
+  padding: 20px;
 }
 
 .item5 h4 {
