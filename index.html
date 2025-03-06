@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -27,7 +28,7 @@
           promote new products and business launches.
         </p>
         <br /><br />
-        <form action="GET">
+        <form action="#" onsubmit="scrollToPricing(event)">
           <button type="submit">Purchase Now</button>
         </form>
       </section>
@@ -122,6 +123,124 @@
             <i class="fa-brands fa-pinterest"></i>
           </a>
         </p>
+      </div>
+    </div>
+    <br />
+    <div class="worldmap">
+      <div class="image">
+        <img src="worldmap.png" alt="worldmap" />
+      </div>
+      <br />
+      <div class="datacenter">
+        <h2>
+          Our <span>data centers</span> spread all over the world. Get access to
+          the API from anywhere
+        </h2>
+        <p>
+          Our data centers are a key component of our global infrastructure,
+          providing reliable and scalable computing resources to customers
+          around the world. We offer a highly distributed and resilient platform
+          that can support the most demanding workloads.
+        </p>
+      </div>
+    </div>
+    <br />
+
+    <div class="pricing" id="pricing-options">
+      <h2>Pricing options</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+        voluptatum obcaecati facilis sed, excepturi iste iusto laborum.
+      </p>
+
+      <div class="price">
+        <div id="arrow" hidden></div>
+        <div class="subscriptiongrid">
+          <div class="subscription">
+            <h2>Free</h2>
+            <br />
+            <div class="cost">
+              <p>$0 <span>/mo</span></p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Aliquam quis perferendis, quas fugiat. Iste quisquam sit</p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Cum ab error sit totam nemo</p>
+            </div>
+            <br />
+            <div class="buy">
+              <button type="button" onclick="showPurchased()">
+                GET IT NOW
+              </button>
+            </div>
+          </div>
+          <div class="subscription" style="border-top: 2px solid #d2ab78">
+            <h2>Regular</h2>
+            <br />
+            <div class="cost">
+              <p>$4.99 <span>/mo</span></p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Aliquam quis perferendis, quas fugiat. Iste quisquam sit</p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Cum ab error sit totam nemo</p>
+            </div>
+            <br />
+            <div class="buy">
+              <button type="button" onclick="showPurchased()">
+                GET IT NOW
+              </button>
+            </div>
+          </div>
+          <div class="subscription">
+            <h2>Premium</h2>
+            <br />
+            <div class="cost">
+              <p>$9.99 <span>/mo</span></p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Aliquam quis perferendis, quas fugiat. Iste quisquam sit</p>
+            </div>
+            <br />
+            <div class="benefit">
+              <i class="arrow right"></i>
+              <p>Cum ab error sit totam nemo</p>
+            </div>
+            <br />
+            <div class="buy">
+              <button type="button" onclick="showPurchased()">
+                GET IT NOW
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

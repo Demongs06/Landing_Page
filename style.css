@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "42dot Sans";
   font-size: 22px;
@@ -46,7 +52,7 @@ h1 {
   color: whitesmoke;
 }
 
-button {
+.main button {
   border: 1px solid yellow;
   background-color: transparent;
   font-size: 16px;
@@ -54,7 +60,7 @@ button {
 }
 
 /*second page*/
-h2 {
+.second h2 {
   font-size: 1.8rem;
   margin: 15px;
 }
@@ -153,8 +159,9 @@ h2 {
   border: 1px solid black;
   font-size: 20px;
   display: flex;
+  padding: 15px 32px;
 }
-/*fourth page*/
+
 .branding {
   padding: 20px;
   display: grid;
@@ -280,21 +287,167 @@ h2 {
     display: flex;
     gap: 15px;
     font-size: 30px;
-  }
-  .item11 a {
+}
+.item11 a {
     text-decoration: none;
     color: #333;
-  }
-  .item11 a:hover {
+}
+.item11 a:hover {
     color: #007bff;
-  }
+}
 
-  button:hover {
+button:hover {
     cursor: pointer;
-  }
+}
 
-  /*for mobile devices*/
-  @media (max-width: 640px){
+/*4th page*/
+.worldmap{
+  background-color: #131519;
+  box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.datacenter{
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: 700px 520px;
+  justify-content: center;
+}
+
+.datacenter h2{
+  width: 80%;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.datacenter span{
+  color: yellow;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.datacenter p{
+  color: grey;
+}
+
+/*5th page*/
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pricing h2 {
+  font-size: 1.8rem;
+  margin: 15px;
+  text-align: center;
+}
+
+.pricing p {
+  font-size: 18px;
+  width: 40%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: gray;
+  text-align: center;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.subscriptiongrid{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  padding: 40px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.subscription h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.subscription p {
+  align-content: start;
+  align-items: center;
+  font-size: 16px;
+  text-align: start;
+  width: 100%;
+  color: black;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.cost p{
+  color: #D2AB78;
+  text-align: center;
+  font-size: 24px;
+}
+
+.subscription span {
+  font-size: 20px;
+  color: #D2AB78;
+}
+
+.arrow {
+  border: solid #D2AB78;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+  align-items: start;
+  margin: 5px 0px 0px 5px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.benefit {
+  display: flex;
+  align-items: start;
+  align-content: center;
+  gap: 20px;
+}
+
+.benefit p{
+  width: 100%;
+}
+
+.buy {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adds spacing above the button */
+}
+
+.buy button {
+  border: 1px solid #D2AB78;
+  background-color: transparent;
+  padding: 15px 32px;
+  text-align: center;
+  display: block; /* Ensures it takes full width */
+}
+
+/*for mobile devices*/
+@media (max-width: 425px){
     
 body {
   font-family: "42dot Sans", sans-serif;
@@ -303,7 +456,7 @@ body {
   padding: 0;
 }
 /*first page*/
-    header::before {
+header::before {
   background: url("landingpage.jpg") no-repeat center center/cover;
   content: "";
   position: absolute;
@@ -472,6 +625,43 @@ button {
   text-align: start;
   align-content: start;
   justify-content: start;
+}
+
+.datacenter{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  
+}
+
+.datacenter h2{
+  text-align: start;
+  align-items: start;
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0;
+  margin: 20px 0px 20px 10px;
+}
+
+.datacenter span{
+  font-size: 1.5rem;
+}
+
+.datacenter p{
+  margin-left: 10px;
+}
+
+.pricing p{
+  width: 80%;
+}
+
+.cost p{
+  width: 100%;
+}
+
+.subscriptiongrid {
+  grid-template-columns: auto;
 }
 
   .column {

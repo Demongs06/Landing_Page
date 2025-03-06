@@ -1,3 +1,8 @@
+function scrollToPricing(event) {
+  event.preventDefault(); // Prevent form submission
+  document.getElementById("pricing-options").scrollIntoView({ behavior: "smooth" });
+}
+
 //redirect to website
   function scrollToFirstDiv() {
     document.getElementById("main").scrollIntoView({ behavior: "smooth" });
@@ -28,3 +33,7 @@ row.addEventListener("touchmove", (e) => {
     const walk = (x - startX) * 1; // Adjust sensitivity
     row.scrollLeft = scrollLeft - walk;
 });
+
+function showPurchased() {
+  alert("Purchased");
+}
