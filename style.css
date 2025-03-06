@@ -21,13 +21,13 @@ section {
   align-items: center;
 }
 
-section::before {
+.main section::before {
   content: "BY FLYNAUT";
   color: whitesmoke;
   font-size: 14px;
 }
 
-header::before {
+.main header::before {
   background: url("landingpage.jpg") no-repeat center center/cover;
   content: "";
   position: absolute;
@@ -39,7 +39,7 @@ header::before {
   opacity: 0.9;
 }
 
-h1 {
+.main h1 {
   font-size: 2rem;
   color: white;
 }
@@ -131,7 +131,6 @@ h1 {
   grid-column: 3/4;
   align-content: start;
   font-size: 18px;
-  
 }
 
 .item4 {
@@ -456,31 +455,36 @@ body {
   padding: 0;
 }
 /*first page*/
-header::before {
+.main header::before {
   background: url("landingpage.jpg") no-repeat center center/cover;
   content: "";
   position: absolute;
   width: 100%;
-  height: 60%;
+  height: 100%;
   z-index: -1;
   top: 0;
   left: 0;
   opacity: 0.9;
 }
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px;
+  position: relative;
+  width: 100%;
+  height: auto; 
+  overflow: hidden;
 }
 
-section {
+.main section {
   height: auto;
   margin: 20px;
 }
 
-h1 {
+.main h1 {
   font-size: 1.5rem;
   color: white;
   width: 80%;
@@ -634,15 +638,19 @@ button {
   flex-direction: column;
   align-items: start;
   text-align: start;
-  
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 .datacenter h2{
   text-align: start;
   align-items: start;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   width: 95%;
-  margin: 20px
+  margin: 20px 0px 20px 20px;
+  box-sizing: border-box;
 }
 
 .datacenter span{
@@ -662,7 +670,14 @@ button {
 }
 
 .subscriptiongrid {
-  grid-template-columns: auto;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.subscription{
+  width: 95%; 
+  padding: 15px;
 }
 
   .column {
@@ -670,7 +685,7 @@ button {
   }
 
   body{
-    margin-right: 0;
+    margin: 0;
     overflow-x: hidden;
   }
 }
