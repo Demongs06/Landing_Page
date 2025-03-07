@@ -85,6 +85,24 @@ section {
   display: flex;
 }
 
+.nav-buttons {
+  display: none; /* Hide by default */
+}
+
+.nav-buttons button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nav-buttons button:hover {
+  background-color: #555;
+}
+
 .column {
   flex: auto;
   padding: 5px;
@@ -348,6 +366,11 @@ img{
   text-align: center;
 }
 
+.pricing span{
+  font-size: 1.8rem;
+  background: none;
+}
+
 .pricing p {
   font-size: 18px;
   width: 40%;
@@ -412,7 +435,7 @@ img{
   border-width: 0 3px 3px 0;
   padding: 3px;
   align-items: start;
-  margin: 5px 0px 0px 5px;
+  margin: 6px 0px 0px 25px;
 }
 
 .right {
@@ -445,6 +468,251 @@ img{
   display: block; /* Ensures it takes full width */
 }
 
+/*for tablet*/
+@media (max-width: 768px){
+    
+  body {
+    font-family: "42dot Sans", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  /*first page*/
+  .main header::before {
+    background: url("landingpage.jpg") no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+  }
+  
+  .main section {
+    height: auto;
+    margin: 20px;
+  }
+  
+  .main h1 {
+    font-size: 1.5rem;
+    color: white;
+    width: 80%;
+  }
+  
+  .main p {
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  /*second page*/
+  .second {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .second p {
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  .row {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+  }
+  
+  .column {
+    flex: none;
+    width: 100vw;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .column img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+  /*third page*/
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding: 20px;
+  }
+  
+  .item1{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .line{
+    display: none;
+  }
+  
+  .item2{
+    width: 100%;
+    padding-left: 20px;
+  }
+  
+  .item3{
+    text-align: start;
+    order: 2;
+  }
+  
+  .item4 {
+    order: 1;
+    margin: 20px;
+  }
+  /*fourth page*/
+  .branding {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .item1 h3 {
+    font-size: 2rem;
+  }
+  
+  .item2 p,
+  .item6 {
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  .item3 {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .item5 h4 {
+    font-size: 2.5rem;
+  }
+  
+  .item6{
+    width: 80%;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+  
+  .item7{
+    width: 80%;
+    color: black;
+  }
+  
+  .item8{
+    margin: 0;
+    margin-top: 10px;
+    text-align: start;
+    align-content: start;
+    justify-content: start;
+  }
+  
+  .item9{
+    margin: 0;
+    text-align: start;
+    align-content: start;
+    justify-content: start;
+  }
+  
+  .item10{
+    margin: 0;
+    margin-top: 10px;
+    text-align: start;
+    align-content: start;
+    justify-content: start;
+  }
+  
+  .item11{
+    margin: 0;
+    text-align: start;
+    align-content: start;
+    justify-content: start;
+  }
+  
+  .datacenter{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  .datacenter h2{
+    text-align: start;
+    align-items: start;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 95%;
+    margin: 20px 0px 20px 20px;
+    box-sizing: border-box;
+  }
+  
+  .datacenter span{
+    font-size: 1.5rem;
+  }
+  
+  .datacenter p{
+    margin: 20px;
+  }
+  
+  .pricing p{
+    width: 80%;
+  }
+  
+  .cost p{
+    width: 100%;
+  }
+  
+  .subscriptiongrid {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  }
+  .subscription{
+    width: 95%; 
+    padding: 15px;
+  }
+  
+    .column {
+      width: 90%;
+    }
+  
+    body{
+      margin: 0;
+      overflow-x: hidden;
+    }
+  }
+
 /*for mobile devices*/
 @media (max-width: 425px){
     
@@ -460,7 +728,7 @@ body {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 85vh;
   z-index: -1;
   top: 0;
   left: 0;
@@ -472,27 +740,30 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
   padding: 20px;
   position: relative;
   width: 100%;
-  height: auto; 
+  height: 85vh; 
   overflow: hidden;
 }
 
 .main section {
   height: auto;
-  margin: 20px;
+  margin: 0px;
 }
 
 .main h1 {
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   color: white;
   width: 80%;
+  margin: 30px 0px;
 }
 
 .main p {
-  font-size: 16px;
+  font-size: 20px;
   width: 90%;
+  margin-bottom: 20px;
 }
 
 button {
@@ -502,35 +773,50 @@ button {
 /*second page*/
 .second {
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 18px;
+}
+.second h2{
+  font-size: 2.2rem;
+  margin: 0px 0px 15px 0px;
 }
 
 .second p {
-  font-size: 16px;
+  font-size: 18px;
   width: 90%;
+  padding: 24px 0px 30px 0px;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: end;
 }
 
 .row {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  white-space: nowrap;
+  gap: 10px;
 }
 
 .column {
-  flex: none;
-  width: 100vw;
+  flex: 0 0 50%;
   scroll-snap-align: center;
   display: flex;
   justify-content: center;
 }
 
 .column img {
-  width: auto;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+
 /*third page*/
 .container{
   display: flex;
@@ -550,7 +836,8 @@ button {
 }
 
 .item2{
-  width: 100%;
+  font-size: 21px;
+  width: 93%;
   padding-left: 20px;
 }
 
@@ -559,9 +846,15 @@ button {
   order: 2;
 }
 
+.item3 ul{
+  display: flex;
+  flex-direction: COLUMN;
+  gap: 6px;
+}
+
 .item4 {
   order: 1;
-  margin: 20px;
+  margin: 48px 20px 20px 20px;
 }
 /*fourth page*/
 .branding {
@@ -569,69 +862,85 @@ button {
   flex-direction: column;
   align-items: start;
   text-align: start;
-  margin: 20px;
-  padding: 20px;
+  margin:  0px 20px 20px 20px;
+  padding:  0px 20px 20px 20px;
 }
 
 .item1 h3 {
-  font-size: 2rem;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
 }
 
-.item2 p,
-.item6 {
-  font-size: 16px;
+.item2 p{
+  font-size: 20px;
   width: 90%;
+  padding-bottom: 60px;
 }
 
 .item3 {
-  margin: 20px;
-  padding: 20px;
+  margin: 20px 20px 0px 20px;
+  padding: 85px 20px 0px 20px;
+}
+
+.item4 button{
+  padding: 20px 40px;
 }
 
 .item5 h4 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: clamp(4rem, 5vw, 2.5rem);
+  margin-bottom: 110px;
 }
 
 .item6{
-  width: 80%;
+  width: 100%;
+  font-size: 24px;
   text-align: start;
-  margin-bottom: 10px;
+  margin-bottom: 70px;
 }
 
 .item7{
-  width: 80%;
+  width: 100%;
   color: black;
 }
 
 .item8{
-  margin: 0;
-  margin-top: 10px;
+  margin-top: 50px;
+  font-size: 20px;
   text-align: start;
   align-content: start;
   justify-content: start;
+  order: 1;
 }
 
 .item9{
-  margin: 0;
+  margin-top: 50px;
+  font-size: 20px;
   text-align: start;
   align-content: start;
   justify-content: start;
+  order: 3;
 }
 
 .item10{
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
+  font-size: 20px;
   text-align: start;
   align-content: start;
   justify-content: start;
+  order: 2;
 }
 
 .item11{
   margin: 0;
+  margin-top: 15px;
+  font-size: 20px;
   text-align: start;
   align-content: start;
   justify-content: start;
+  order: 4;
 }
 
 .datacenter{
@@ -646,39 +955,78 @@ button {
 .datacenter h2{
   text-align: start;
   align-items: start;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(2rem, 5vw, 1.5rem);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  width: 95%;
-  margin: 20px 0px 20px 20px;
+  width: 100%;
+  margin: 0;
+  padding: 50px 20px 20px 20px;
   box-sizing: border-box;
 }
 
 .datacenter span{
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 5vw, 1.5rem);
 }
 
 .datacenter p{
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
+  font-size: 24px;
+}
+
+.pricing h2{
+  font-size: 2rem;
+  margin: 50px 0px 20px 0px;
+  color: white;
+  background-color: #D2AB78;
+  display: inline;
+  padding: 5px 0px 5px 5px;
+}
+
+.pricing span{
+  color: black;
+  background-color: white;
+  padding: 10px 0px;
 }
 
 .pricing p{
-  width: 80%;
+  font-size: 20px;
+  width: 90%;
+  padding: 5px 0px 45px 0px;
 }
 
 .cost p{
   width: 100%;
+  font-size: 2rem;
+  padding: 5px 0px 35px 0px;
+}
+
+.cost span{
+  font-size: 20px;
 }
 
 .subscriptiongrid {
   display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    gap: 20px;
 }
 .subscription{
   width: 95%; 
-  padding: 15px;
+  gap: 0;
+  padding: 15px 15px 45px 15px;
+  display: flex;
+  flex-shrink: initial;
+}
+
+.subscription h2{
+  color: black;
+  background-color: transparent;
+  font-size: 22px;
+}
+
+.benefit p{
+  padding: 0;
 }
 
   .column {

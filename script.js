@@ -3,12 +3,14 @@ function scrollToPricing(event) {
   document.getElementById("pricing-options").scrollIntoView({ behavior: "smooth" });
 }
 
+
 //redirect to website
   function scrollToFirstDiv() {
     document.getElementById("main").scrollIntoView({ behavior: "smooth" });
   }
 
-  //today date
+
+//today date
 const today = new Date();
 
 const formattedDate = today.toLocaleDateString('en-US', {
@@ -19,21 +21,23 @@ const formattedDate = today.toLocaleDateString('en-US', {
 
 document.getElementById("currentDate").textContent = formattedDate;
 
+
 //scroll image
 const row = document.querySelector(".row");
-let startX, scrollLeft;
+const columns = document.querySelectorAll(".column");
+const imageWidth = columns[0].offsetWidth; // Get the width of one image
+const scrollAmount = imageWidth * 2; // Scroll 2 images at a time
 
-row.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].pageX - row.offsetLeft;
-    scrollLeft = row.scrollLeft;
+document.querySelector(".scroll-left").addEventListener("click", () => {
+  row.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 });
 
-row.addEventListener("touchmove", (e) => {
-    const x = e.touches[0].pageX - row.offsetLeft;
-    const walk = (x - startX) * 1; // Adjust sensitivity
-    row.scrollLeft = scrollLeft - walk;
+document.querySelector(".scroll-right").addEventListener("click", () => {
+  row.scrollBy({ left: scrollAmount, behavior: "smooth" });
 });
 
+
+//purchase
 function showPurchased() {
   alert("Purchased");
 }
