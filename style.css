@@ -520,12 +520,13 @@ body {
 }
 
 .main p {
-  font-size: 20px;
-  width: 85%;
+  font-size: 18px;
+  width: 90%;
   margin-bottom: 20px;
 }
 
-button {
+.main button {
+  color: white;
   font-size: 14px;
   padding: 10px 20px;
 }
